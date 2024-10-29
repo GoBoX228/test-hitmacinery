@@ -1,0 +1,56 @@
+@use '../media';
+
+.supervisor-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+
+    @include media.mobile {
+        flex-direction: column;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    &__wrapper:last-child {
+        text-align: right;
+
+        @include media.mobile {
+            text-align: left;
+        }
+    }
+
+
+
+    &__desc {
+        @include media.fluid-text(16, 14); 
+        color: #646464;
+    }
+
+    &__name {
+        @include media.fluid-text(24, 16);
+    }
+
+    &__post {
+        @include media.fluid-text(16, 14);
+        color: #646464;
+    }
+
+    &__phone {
+        @include media.fluid-text(16, 14); 
+        color: #000000;
+    }
+
+    &__email {
+        @include media.fluid-text(16, 14); 
+        text-decoration: underline !important;
+        color: #337cc0;
+    }
+}

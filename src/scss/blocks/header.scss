@@ -1,0 +1,17 @@
+@use '../media';
+
+.header {
+    padding-block: 20px;
+
+    @include media.mobile {
+        padding-block: 10px;
+    }
+
+    .logo {
+        width: 150px;
+
+        &__image {
+            max-width: 100%;
+        }
+    }
+}

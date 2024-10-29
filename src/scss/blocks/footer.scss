@@ -1,0 +1,10 @@
+@use '../media';
+
+.footer {
+    padding-block: 20px;
+    @include media.fluid-text(16, 12);
+
+    @include media.mobile {
+        padding-block: 10px;
+    }
+}

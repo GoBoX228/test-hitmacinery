@@ -1,0 +1,18 @@
+mixin employee-card(name, avatar, post, phone, email, QRcode)
+    .employee-card 
+        .employee
+            img.employee__avatar(src=avatar alt="avatar")
+            .employee__data 
+                p.employee__name= name
+                p.employee__post= post
+                a.employee__phone(href=`tel:${phone}`) #{phone}  
+                a.employee__email(href=`mailto:${email}`) #{email} 
+        .share-data 
+            .share-data__QR-code
+                img(src=QRcode, alt="qr-code")
+                p Отсканируйте QR-код и добавьте контакты на телефон
+            .share-data__mobile.visually-hidden
+                button.share-data__mobile-button#saveContact Добавить в контакты
+                button.share-data__mobile-button#makeCall Позвонить
+                button.share-data__mobile-button#writeEmail Написать
+            button.share-data__button#shareProfile Поделиться

@@ -1,0 +1,31 @@
+@use '../variables';
+@use '../media';
+
+.banner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: solid 2px;
+    border-color: variables.$accent-color;
+    border-radius: 10px;
+
+    @include media.mobile {
+        padding: 15px;
+    }
+  
+    &__text {
+        @include media.fluid-text(32, 16);
+        color: variables.$dark-color;
+    }
+
+    &__image {
+        max-height: 80px;
+        border-radius: 5px;
+
+        @include media.mobile {
+            max-height: 60px;
+        }
+      
+    }
+}

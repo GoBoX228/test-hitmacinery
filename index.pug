@@ -1,0 +1,19 @@
+extends src/components/layout
+include src/components/mixins/employee-card-mixin
+include src/components/mixins/link-button-mixin
+include src/components/mixins/supervisor-card-mixin 
+
+block content
+    .container.main-grid
+        include src/components/banner
+        +employee-card('Стецюк Александр', 'src/assets/employee.jpg', 'Руководитель, ОП Сургут', '7(982)185-28-37', 'stetsyk@hitmachinery.ru', 'src/assets/testQRcode.png')
+
+        .links 
+            +link-button('Специехника в наличии', 'https://hitmachinery.ru/machinery/')
+            +link-button('Сервис', 'https://hitmachinery.ru/service/')
+            +link-button('Запчасти', 'https://hitmachinery.ru/zapchasti/')
+            +link-button('Навесное оборудование', 'https://hitmachinery.ru/navesnoe-oborudovanie/')
+
+        +supervisor-card-mixin('Франк Артур', 'Региональный руководитель по УФО, ОП Челябинск', '7(919)304-05-55', 'frank@hitmachinery.ru')
+
+

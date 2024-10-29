@@ -1,0 +1,10 @@
+mixin supervisor-card-mixin(name, post, phone, email)
+    .supervisor-card 
+        .supervisor-card__wrapper
+            p.supervisor-card__desc Контакты руководителя
+            p.supervisor-card__name= name
+            p.supervisor-card__post= post
+        .supervisor-card__wrapper
+            a.supervisor-card__phone(href=`tel:${phone}`) #{phone}  
+            a.supervisor-card__email(href=`mailto:${email}`) #{email} 
+        
